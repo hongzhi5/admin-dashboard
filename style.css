@@ -2,13 +2,53 @@
     font-family: 'CaviarDreams';
     src: url('./font/CaviarDreams.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'CaviarDreams-bold';
+    src: url('./font/CaviarDreams_Bold.ttf') format('truetype');
+}
 body{
     display: grid;
     margin: 0;
 }
+
 header{
     margin: 0;
-    height: 50px;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.headLeft,
+.headRight{
+    display: flex;
+}
+.headRight{
+    gap: 25px;
+}
+.homeIcon{
+    width: 30px;
+    height: 28px;
+}
+.headName{
+    font-family: 'CaviarDreams-bold', sans-serif;
+    color: #132743;
+    font-weight: 800;
+    font-size: 23px;
+}
+.search{
+    background-image: url(./imgs/magnify.svg);
+    width: 30px;
+    height: 28px;
+}
+.notification{
+    background-image: url(./imgs/bell.svg);
+    width: 30px;
+    height: 28px;
+}
+.profile{
+    background-image: url(./imgs/account.svg);
+    width: 30px;
+    height: 28px;
 }
 .main{
     display: grid;
@@ -31,9 +71,10 @@ header{
 }
 .createNew{
     border-radius: 15px;
-    height: 10%;
+    height: 13%;
     width: 100%;
     background-image: url(./imgs/createNew.png);
+    background-size: cover;
     font-family: 'CaviarDreams', sans-serif;
     color: #fafafa;
     font-weight: 900;
@@ -44,63 +85,150 @@ header{
 .side1,
 .side2,
 .side3 {
-    border: 1px solid black;
     border-radius: 15px;
     height: 30%;
     width: 100%;
     background-color: #fafafa;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 0.1fr 1fr;
+}
+.side-icon{
+    width: 20px;
+    height: 20px;
+    grid-column: 1 / 2;
+    margin: 20px;
+}
+.side-items{
+    font-family: 'CaviarDreams-bold', sans-serif;
+    color: #132743;
+    font-size: 14px;
+    text-decoration: none;
+    grid-column: 2 / 3;
+    margin: 20px;
+    margin-left: 0;
 }
 .welcome{
     border-radius: 15px;
+    border: #e6a4b4 solid 3px;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     background-image: url(./imgs/welcome.jpg);
+    background-size: cover;
+    padding: 20px;
     font-family: 'CaviarDreams', sans-serif;
-    color: #fafafa;
+    color: #132743;
     font-size: 60px;
+    
+}
+.welcome2{
+    font-family: 'CaviarDreams', sans-serif;
+    color: #132743;
+    font-size: 30px;
 }
 .inbox{
-    border: 1px solid black;
+    border: 3px solid #ffe79a;
+    background-color: #feffdf;
     border-radius: 15px;
     grid-column: 4 / 5;
     grid-row: 1 / 2;
+    padding: 20px;
+    font-family: 'CaviarDreams', sans-serif;
+    color: #132743;
+    font-size: 30px;
 }
 .project{
-    border: 1px solid black;
     border-radius: 15px;
     grid-column: 2 / 5;
     grid-row: 2 / 3;
     background-color: #fafafa;
+    padding: 20px;
+    font-family: 'CaviarDreams', sans-serif;
+    color: #132743;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    gap: 20px;
+}
+.calculator,
+.paint,
+.signup,
+.rock{
+    font-size: 20px;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.calculator-button,
+.paint-button,
+.signup-button,
+.rock-button{
+    width: 180px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 10px #e6a4b4;
+}
+.calculator-button{
+    background-image: url(./imgs/cal.jpg);
+}
+.paint-button{
+    background-image: url(./imgs/paint.jpg);
+}
+.signup-button{
+    background-image: url(./imgs/sign-up.jpg);
+}
+.rock-button{
+    background-image: url(./imgs/game.jpg);
 }
 .stat1{
-    border: 1px solid black;
-    border-radius: 15px;
     grid-column: 2 / 3;
     grid-row: 3 / 5;
-    background-color: #fafafa;
 }
 .stat2{
-    border: 1px solid black;
-    border-radius: 15px;
     grid-column: 3 / 4;
     grid-row: 3 / 5;
-    background-color: #fafafa;
 }
 .stat3{
-    border: 1px solid black;
-    border-radius: 15px;
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    background-color: #fafafa;
 }
 .stat4{
-    border: 1px solid black;
-    border-radius: 15px;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
+}
+.stat1,
+.stat2,
+.stat3,
+.stat4{
+    border-radius: 15px;
     background-color: #fafafa;
+    font-family: 'CaviarDreams', sans-serif;
+    color: #132743;
+    font-size: 30px;
+    padding: 20px;
 }
 footer{
     margin: 0;
     height: 30px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'CaviarDreams-bold', sans-serif;
+    font-size: 15px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.git-link{
+    text-decoration: none;
+    color: #132743;
+}
+.git-img{
+    width: 20px;
+    height: 20px;
 }
